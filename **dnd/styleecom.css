@@ -4,43 +4,31 @@
   box-sizing: border-box;
 }
 
-:root {
-  --background: rgba( 0,0,0,.5);
-}
-
 body {
   font-family: 'Bayon', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0F0F0F;
   color: white;
 }
 
-.hero {
+.content {
   height: 100vh;
-  background: url("images/rename.png");
+  background: url("images/ecomhero.png");
   background-color: #888;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero img {
-  margin-top: -50px;
-  width: 68vh;
 }
 
 .navigation {
   background: var(--background);
   text-align: center;
   position: fixed;
-  top: 0;
   width: 100%;
   z-index: 999;
+  margin-top: 35px;
+  margin-left: 25px;
 }
 
 .nav-toggle {
@@ -49,7 +37,7 @@ body {
 
 .nav-toggle-label {
   position: absolute;
-  top: 25px;
+  top: 40px;
   left: 25px;
   display: flex;
   align-items: center;
@@ -80,6 +68,7 @@ nav ul {
 
 nav li {
   margin-bottom: 1em;
+  margin-left: 1.5em;
 }
 
 nav a {
@@ -112,31 +101,25 @@ nav a:hover {
   }
  
   .navigation {
-    display: flex;
-    justify-content: center;
-    /*
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-    */
   }
   
   nav {
     all: unset;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    /*border-bottom: 1px solid rgba(255, 255, 255, .6);*/
-
   }
   
   nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
   
   nav li {
-    margin: 1.5em;
-    margin-bottom: 1.5em;
+    margin-left: 1.75em;
+    margin-bottom: 0;
   }
   
   nav a {
@@ -145,16 +128,46 @@ nav a:hover {
   }
 }
 
-.lineup {
-  height: 100vh;
+section {
+  display: flex;
   justify-content: center;
-  position: absolute;
-  align-items: center;
-  text-align: center;
-  margin: 10px auto 0;
+  background-color: #2B3336;
+  padding: 45px;
 }
 
-.lineup img {
-  width: 90%;
+.card {
+  width: 250px;
+  padding: 15px;
   margin: 10px;
+  color: #0F0F0F;
+  background-color: #B7D8E7;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: block;
+    /*grid-template-columns: repeat(1,1fr);*/
+  }
 }
