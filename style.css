@@ -94,7 +94,7 @@ nav a {
 
 nav a:hover {
   color: #FF5400;
-  transition-duration: 5s;
+  transition-duration: .25s;
 }
 
 .nav-toggle:checked ~ nav {
@@ -156,6 +156,7 @@ nav a:hover {
 .lineup-content {
   background: rgb(76,83,224);
   background: linear-gradient(180deg, rgba(76,83,224,1) 0%, rgba(245,67,144,1) 66%, rgba(255,200,14,1) 100%);
+  background-attachment: fixed;
   width: 90%;
   justify-content: center;
   text-align: center;
@@ -212,7 +213,7 @@ nav a:hover {
   color: #0F0F0F;
   background-color: #B6B8E7;
   margin-top: 75px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .card img {
@@ -240,7 +241,7 @@ h2 {
   font-size: 14pt;
   display: block;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card-button a {
@@ -406,32 +407,55 @@ footer {
   font-weight: 300;
   font-size: 15px;
   line-height: 22px;
+  
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-logo img {
+  width: 100%;
+  max-width: 250px;
 }
 
 .footer-logo {
-  display: flex;
-  width: 10%;
+  flex: 1;
 }
 
+
 .footer-links {
-  display: flex;
   font-family: "bayon", sans-serif;
   font-family: "bayon", sans-serif;
   font-size: 14pt;
-  display: block;
+  display: flex;
+  flex: 1;
+}
+
+.footer-links li {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 .footer-links a {
   color: white;
   list-style: none;
   text-decoration: none;
+  display: grid;
 }
 
 .socials {
-  display: flex;
+  flex: 1;
+  text-align: center;
+  padding-left: 10px;
 }
 
 footer p {
   font-size: 10px;
   text-align: center;
+  line-height: 1.5em;
 }
